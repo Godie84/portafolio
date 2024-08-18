@@ -1,68 +1,567 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="dependencies/bootstrap/css/bootstrap.min.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diego Reina - Portafolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="manifest" href="/manifest.json">
-    <meta name="theme-color" content="#007bff">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <title>Document</title>
+    <meta name="x-apple-disable-message-reformatting" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <style>
+        /* Windows Phone Viewport Fix */
+        ReadMsgBody {
+            width: 100%
+        }
+
+        .ExternalClass {
+            width: 100%
+        }
+
+        .ExternalClass,
+        .ExternalClass p,
+        .ExternalClass span,
+        .ExternalClass font,
+        .ExternalClass td,
+        .ExternalClass div {
+            line-height: 100%
+        }
+
+        body {
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            margin: 0 !important
+        }
+
+        p {
+            margin: 1em 0
+        }
+
+        table td {
+            border-collapse: collapse
+        }
+
+        img {
+            outline: 0
+        }
+
+        a img {
+            border: 0
+        }
+
+        p {
+            margin: 1em 0
+        }
+
+        @-ms-viewport {
+            width: device-width
+        }
+
+        .outer {
+            width: 100%;
+            max-width: 600px;
+            background-color: #fff
+        }
+
+        .wrapper {
+            width: 100%;
+            max-width: 100%;
+            table-layout: fixed;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%
+        }
+
+        .mxWd {
+            max-width: 100%
+        }
+
+        .wd100 {
+            width: 100%
+        }
+
+        .wd50 {
+            width: 50%
+        }
+
+        .alLeft {
+            text-align: left
+        }
+
+        .alCenter {
+            text-align: center
+        }
+
+        .alRight {
+            text-align: right
+        }
+
+
+        .pdLeft {
+            padding-left: 20px
+        }
+
+        .pdLeft16 {
+            padding-left: 14px
+        }
+
+        .center {
+            background-color: #fff
+        }
+
+        .linksSup {
+            min-height: 48px;
+            text-align: center;
+            padding-left: 2%;
+            padding-right: 2%
+        }
+
+        .header {
+            background-color: #0040a8;
+            padding-left: 16px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            border-radius: 8px
+        }
+
+        .zona-segura {
+            border-spacing: 0;
+            color: #fff;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-right: 32px;
+            padding-left: 32px;
+            width: 100%;
+            background-color: #f8f9fa
+        }
+
+        .txtSegura {
+            font-family: 'Arial', 'Lucida Grande', sans-serif;
+            font-size: 12px;
+            color: #606060;
+            margin-top: 0;
+            margin-bottom: 2px;
+            margin-right: 0;
+            margin-left: 0;
+            text-decoration: none
+        }
+
+        .txtDecoUnd {
+            text-decoration: underline
+        }
+
+        .txtDecoNone {
+            text-decoration: none
+        }
+
+        .txtSegura strong {
+            font-weight: bold
+        }
+
+        .spacingAllReset {
+            padding-top: 0;
+            padding-bottom: 0;
+            padding-right: 0;
+            padding-left: 0
+        }
+
+        .candado {
+            border-width: 0;
+            display: inline-block;
+            max-width: 100%;
+            padding-right: 8px;
+            width: 10px;
+            height: auto
+        }
+
+        .transaccional {
+            text-align: center;
+            background-color: #f2f2f2;
+            min-height: 96px
+        }
+
+        .redes {
+            text-align: center;
+            background-color: #34415d;
+            min-height: 48px;
+            padding-left: 15%;
+            padding-right: 15%
+        }
+
+        .seguridad {
+            background-color: #f2f2f2;
+            text-align: center;
+            padding-left: 3%;
+            padding-right: 3%;
+            padding-bottom: 16px
+        }
+
+        .txtSeguridad {
+            padding-left: 16px
+        }
+
+        .footer {
+            background-color: #fff;
+            text-align: center;
+            padding-top: 16px;
+            padding-bottom: 16px
+        }
+
+        .titFooter {
+            font-family: 'Arial', 'Lucida Grande', sans-serif;
+            font-size: 18px;
+            line-height: 20px;
+            color: #0041a7
+        }
+
+        .txtFooter {
+            font-family: 'Arial', 'Lucida Grande', sans-serif;
+            color: #6d6e70;
+            font-size: 14px;
+            line-height: 18px
+        }
+
+        .logo-super {
+            padding-right: 24px
+        }
+
+        .ico-seguridad {
+            padding-right: 16px;
+            border-right-width: 1px;
+            border-right-color: #606060;
+            border-right-style: solid
+        }
+
+        .resetMarginTxt {
+            margin-block-start: 0;
+            margin-block-end: 0
+        }
+    </style>
+
 </head>
 
-<script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/service-worker.js')
-        .then(function(registration) {
-          console.log('Service Worker registrado con éxito:', registration);
-        })
-        .catch(function(error) {
-          console.log('Error al registrar el Service Worker:', error);
-        });
-    }
-  </script>
-  
-
 <body>
-    <header>
-        <h1>Diego Reina</h1>
-        <p>Desarrollador de Software</p>
-    </header>
+    <section style="padding-bottom: 3%;"
+        class="process-wrap-layo  bg-size-cover bg-no-repeat bg-position-center has-animation">
+        <div>
+            <div>
+                <div class="item-img">
+                    <img style="width: 100%; height: 600px; margin: 0; padding: 0;" src="assets/img/Intro/Banner.png"
+                        alt="Banner">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
 
-    <nav>
-        <ul>
-            <li><a href="#about">Sobre mí</a></li>
-            <li><a href="#projects">Proyectos</a></li>
-            <li><a href="#contact">Contacto</a></li>
-        </ul>
-    </nav>
+        <div>
+            <img class="lmnu" alt="">
+            <div class="buttons">
+                <div class="buttom2">
+                    <a href="#Desarrollo"><img style="width: 20em;" src="assets/img/Intro/Landing_Julio-22.png"
+                            alt=""></a>
+                </div>
+                <div class="buttom1">
+                    <a href="#Bienestar"><img style="width: 20em; padding-block-start; "
+                            src="assets/img/Intro/Landing_Julio-21.png" alt=""></a>
+                </div>
+                <div class="buttom3">
+                    <a href="#Inclusion"><img style="width: 20em;" src="assets/img/Intro/Landing_Julio-23.png"
+                            alt=""></a>
+                </div>
+            </div>
+        </div>
 
-    <main>
-        <section id="about">
-            <h2>Sobre mí</h2>
-            <p>Soy un desarrollador de software con experiencia en aplicaciones móviles y soluciones web. Me especializo
-                en Android y desarrollo multiplataforma.</p>
+        <section class="feature-wrap-layout2">
+            <div class="container">
+                <div class="section-heading heading-dark ">
+                    <h3 style="text-align: center; font-size: 25px;line-height: 25px; padding-bottom: 0%;"
+                        class="heading-main-title tittle"><strong style="color:#000000; ">Estos son algunos de los
+                            proyectos más recientes <br> destacados durante mi experiencia profesional, como
+                            desarrollador de software. </h3>
+                </div>
+            </div>
+        </section>
+    </section>
+    <!--=====================================-->
+    <!--=          init Desarrollo       1  =-->
+    <!--=====================================-->
+    <section id="Desarrollo" class=" bg-color-light position-relative" style="padding-bottom:0px;">
+        <div>
+            <div class="bienes">
+                <div style="width: auto;">
+                    <img style="width:100%;" src="assets/img/Proyectos/Landing_Julio-09.png">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="feature-wrap-layout2 overflow-hidden">
+        <section>
+            <div class="container">
+                <div class="section-heading heading-dark heading-layout1">
+                    <h3 style="text-align: center; font-size: 20px;line-height: 45px; padding-bottom: 10px;"
+                        class="heading-main-title tittleb"><strong style="color:#919150;">Experiencia laboral</strong>
+                    </h3>
+                </div>
+            </div>
         </section>
 
-        <section id="projects">
-            <h2>Proyectos</h2>
-            <div class="project">
-                <h3>Proyecto 1</h3>
-                <p>Descripción breve del proyecto.</p>
-                <a href="https://github.com/tu-usuario/proyecto1" target="_blank">Ver en GitHub</a>
+        <div class="container">
+            <div class="row gutters-50">
+
+
+                <!--- section 1-->
+                <div id="desa1" class="col-lg-6 order-lg-2 has-animation">
+                    <div class="translate-bottom-75 opacity-animation transition-150 transition-delay-10">
+                        <div class="item-figure imgset">
+                            <img class="fade-img" src="assets/img/Proyectos/Login.jpeg">
+                            <img class="fade-img" src="assets/img/Proyectos/Panel.jpeg">
+                            <img class="fade-img" src="assets/img/Proyectos/Busqueda.jpeg">
+                            <img class="fade-img" src="assets/img/Proyectos/Captura.jpeg">
+                            <img class="fade-img" src="assets/img/Proyectos/Envio.jpeg">
+                        </div>
+                    </div>
+                </div>
+
+                <style>
+                    .imgset {
+                        position: relative;
+                        width: 500px;
+                        height: 500px;
+                        overflow: hidden;
+                    }
+
+                    .fade-img {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                        /* Ajusta la imagen para que se vea completa dentro del contenedor */
+                        opacity: 0;
+                        animation: fadeAnimation 25s infinite;
+                    }
+
+                    .fade-img:nth-child(1) {
+                        animation-delay: 0s;
+                    }
+
+                    .fade-img:nth-child(2) {
+                        animation-delay: 5s;
+                    }
+
+                    .fade-img:nth-child(3) {
+                        animation-delay: 10s;
+                    }
+
+                    .fade-img:nth-child(4) {
+                        animation-delay: 15s;
+                    }
+
+                    .fade-img:nth-child(5) {
+                        animation-delay: 20s;
+                    }
+
+                    @keyframes fadeAnimation {
+
+                        0%,
+                        20%,
+                        100% {
+                            opacity: 0;
+                        }
+
+                        4%,
+                        16% {
+                            opacity: 1;
+                        }
+                    }
+                </style>
+
+
+
+
+                <div class="col-lg-6 order-lg-1 d-flex align-items-center justify-content-center has-animation">
+                    <div class="feature-box-layout2">
+                        <div class="translate-bottom-75 opacity-animation transition-150 transition-delay-200">
+                            <h3 class="item-title" style="color: #919150;">Telcos ingeniería s.a<br> Desarrollador de
+                                software ful stack.
+                            </h3>
+                        </div>
+
+                        <!---Decoration Line-->
+                        <div class="lineal2">
+
+                        </div>
+                        <h3 class="item-title" style="color: #919150;">• Proyecto: Aplicación móvil para el registro de
+                            asistencia.<br>
+                        </h3>
+                        <div class="translate-bottom-75 opacity-animation transition-150 transition-delay-500">
+                            <p style="color:#ADADAD;">Desarrollo de una aplicación móvil en Android, para el registro de
+                                asistencia de los empleados de la empresa, internos y externos, permitiendo a los
+                                usuarios registrar la hora de entrada y salida con los datos personales y captura
+                                fotográfica, los cuales son enviados a una aplicación web REST API, con la funcionalidad
+                                de gestionar informes y reportes a formato Excel para fines administrativos. </p>
+                        </div>
+
+                    </div>
+                </div>
             </div>
-            <div class="project">
-                <h3>Proyecto 2</h3>
-                <p>Descripción breve del proyecto.</p>
-                <a href="https://github.com/tu-usuario/proyecto2" target="_blank">Ver en GitHub</a>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="row gutters-50">
+            <!--- section 2-->
+            <div id="desa2" class="col-lg-6 has-animation">
+                <div class="translate-left-75 opacity-animation transition-200 transition-delay-10">
+                    <div class="">
+                        <div class="item-figure imgset">
+                            <img style="width: 600px;" src="assets/img/Proyectos/Landing_Julio-13.png">
+                        </div>
+                    </div>
+                </div>
             </div>
-            <!-- Añade más proyectos según sea necesario -->
-        </section>
-    </main>
+            <div class="col-lg-6 d-flex align-items-center justify-content-center has-animation">
+                <div class="feature-box-layout2">
+                    <div class="translate-bottom-75 opacity-animation transition-150 transition-delay-200">
+                        <h3 class="item-title" style="color: #919150;"> Nos unimos al Centro de <br> Emprendimiento e
+                            Innovación <br> del CESA</h3>
+                    </div>
+                    <!---Decoration Line-->
+                    <div class="lineal2">
+
+                    </div>
+                    <div class="translate-bottom-75 opacity-animation transition-150 transition-delay-500">
+                        <p style="color:#ADADAD;"><strong style="color:#858585;">Apoyamos la iniciativa de Retos
+                                Empresariales del CESA. </strong> En este segundo semestre 60 estudiantes abordarán
+                            algunos desafíos actuales del mercado financiero y junto con los profesores de sus
+                            asignaturas y facilitadores de nuestra Vicepresidencia de Tecnología hallarán posibles
+                            soluciones con impacto en el negocio. Al finalizar el reto, reconoceremos los mejores
+                            proyectos presentados. </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+
+    </section>
+    <!--=====================================-->
+    <!--=          init Bienestarr        1  =-->
+    <!--=====================================-->
+    <section id="Bienestar" class=" bg-color-light position-relative" style="padding-bottom:0px;">
+        <div>
+            <div>
+
+                <div class="bienes" style="width:auto;">
+                    <img style="width: 100%;" src="assets/img/Bienestar/Landing_Julio-04.png">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="feature-wrap-layout2 overflow-hidden">
+        <div class="col-lg-9 d-flex align-items-center justify-content-center has-animation">
+            <div class="section-heading heading-dark heading-layout1">
+                <h3 style="text-align: center; font-size: 20px;line-height: 45px; padding-bottom: 10px;"
+                    class="heading-main-title tittleb"><strong style="color:#d7733c;">Apoyamos el bienestar de nuestros
+                        colaboradores </strong> </h3>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row gutters-50">
+
+
+                <!--- section 1-->
+                <div id="bien1" class="col-lg-6 has-animation">
+                    <div class="translate-left-75 opacity-animation transition-200 transition-delay-10">
+                        <div class="">
+                            <div class="item-figure imgset">
+                                <img style="width: 600px;" src="assets/img/Bienestar/Landing_Julio-05.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 d-flex align-items-center justify-content-center has-animation">
+                    <div class="feature-box-layout2">
+                        <div class="translate-bottom-75 opacity-animation transition-150 transition-delay-200">
+                            <h3 class="item-title text" style="color: #d7733c;">Somos reconocidos <br>
+                                internacionalmente como Empresa <br> Heroína por las iniciativas de bienestar <br> y
+                                felicidad laboral </h3>
+                        </div>
+                        <!---Decoration Line-->
+                        <div class="lineal">
+
+                        </div>
+                        <div class="translate-bottom-75 opacity-animation transition-150 transition-delay-500">
+                            <p style="color:#ADADaD;">Este reconocimiento como Empresa Heroína nos motiva a seguir
+                                innovando para ofrecer a nuestros colaboradores los mejores programas de desarrollo,
+                                bienestar y balance entre la vida laboral y personal. <strong style="color:#858585;"> La
+                                    metodología para ser seleccionados contó con la calificación de nuestros
+                                    colaboradores sobre la gestión en talento. </strong> El desafío ahora es
+                                personalizar cada vez las experiencias promoviendo el talento de cada colaborador de
+                                manera extraordinaria.</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!--- section 2-->
+                <div id="bien2" class="col-lg-6 order-lg-2 has-animation">
+                    <div class="translate-bottom-75 opacity-animation transition-150 transition-delay-10">
+                        <div>
+                            <div class="feature-box-layoutass=" item-figure imgset>
+                                <img style="width: 600px;" src="assets/img/Bienestar/Landing_Julio-07.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-1 d-flex align-items-center justify-content-center has-animation">
+                    <div class="feature-box-layout2">
+                        <div class="translate-bottom-75 opacity-animation transition-150 transition-delay-200">
+                            <h3 class="item-title" style="color: #d7733c;">Contamos certificación <br> internacional
+                                como Empresa <br> Familiarmente Responsable</h3>
+                        </div>
+                        <!---Decoration Line-->
+                        <div class="lineal">
+
+                        </div>
+                        <div class="translate-bottom-75 opacity-animation transition-150 transition-delay-500">
+                            <p style="color:#ADADAD;"><strong style="color:#858585;">Uno de los objetivos de nuestra
+                                    estrategia de Talento es el balance entre la vida laboral y la vida familiar de los
+                                    equipos. </strong> Nos orientamos en tres propósitos: (i) cultivar una cultura
+                                organizacional en donde los líderes se caracterizan por un estilo de dirección
+                                respetuoso con la conciliación vida personal, familiar y laboral; (ii) implementar
+                                programas poderosos de desarrollo y bienestar; y (iii) ofrecer igualdad de oportunidades
+                                y un ambiente diverso e inclusivo. </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+    <!-- NIVEL FOOTER -->
 
     <footer>
-        <p>&copy; 2024 Diego Reina. Todos los derechos reservados.</p>
+        <p>© 2024 Diego Reina. Todos los derechos reservados.</p>
     </footer>
+
+    </center>
+
+    <script src="dependencias/js/bootstrap.min.js"></script>
 </body>
 
 </html>
