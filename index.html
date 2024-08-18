@@ -1,44 +1,68 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Portafolio</title>
+    <title>Diego Reina - Portafolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#007bff">
 </head>
+
+<script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js')
+        .then(function(registration) {
+          console.log('Service Worker registrado con éxito:', registration);
+        })
+        .catch(function(error) {
+          console.log('Error al registrar el Service Worker:', error);
+        });
+    }
+  </script>
+  
+
 <body>
     <header>
         <h1>Diego Reina</h1>
         <p>Desarrollador de Software</p>
     </header>
-    
-    <section id="about">
-        <h2>Sobre mí</h2>
-        <p>Bienvenido a mi portafolio en GitHub. Soy un desarrollador de software con 4 años de experiencia en el desarrollo de aplicaciones móviles para Android y soluciones web multiplataforma. Mi enfoque principal es crear aplicaciones eficientes, escalables y con una experiencia de usuario excepcional.</p>
-    </section>
-    
-    <section id="projects">
-        <h2>Proyectos</h2>
-        <div class="project">
-            <h3>Proyecto 1</h3>
-            <p>Descripción breve del proyecto.</p>
-            <a href="https://github.com/tu-usuario/proyecto1" target="_blank">Ver en GitHub</a>
-        </div>
-        <div class="project">
-            <h3>Proyecto 2</h3>
-            <p>Descripción breve del proyecto.</p>
-            <a href="https://github.com/tu-usuario/proyecto2" target="_blank">Ver en GitHub</a>
-        </div>
-        <!-- Añade más proyectos según sea necesario -->
-    </section>
-    
-    <section id="contact">
-        <h2>Contacto</h2>
-        <p>Puedes contactarme en <a href="mailto:correo@ejemplo.com">correo@ejemplo.com</a></p>
-    </section>
-    
+
+    <nav>
+        <ul>
+            <li><a href="#about">Sobre mí</a></li>
+            <li><a href="#projects">Proyectos</a></li>
+            <li><a href="#contact">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="about">
+            <h2>Sobre mí</h2>
+            <p>Soy un desarrollador de software con experiencia en aplicaciones móviles y soluciones web. Me especializo
+                en Android y desarrollo multiplataforma.</p>
+        </section>
+
+        <section id="projects">
+            <h2>Proyectos</h2>
+            <div class="project">
+                <h3>Proyecto 1</h3>
+                <p>Descripción breve del proyecto.</p>
+                <a href="https://github.com/tu-usuario/proyecto1" target="_blank">Ver en GitHub</a>
+            </div>
+            <div class="project">
+                <h3>Proyecto 2</h3>
+                <p>Descripción breve del proyecto.</p>
+                <a href="https://github.com/tu-usuario/proyecto2" target="_blank">Ver en GitHub</a>
+            </div>
+            <!-- Añade más proyectos según sea necesario -->
+        </section>
+    </main>
+
     <footer>
         <p>&copy; 2024 Diego Reina. Todos los derechos reservados.</p>
     </footer>
 </body>
+
 </html>

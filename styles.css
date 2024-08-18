@@ -1,48 +1,97 @@
+/* Estilos generales */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #fafafa;
     color: #333;
+    line-height: 1.6;
 }
 
+/* Encabezado */
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
     text-align: center;
+    padding: 50px 20px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #eaeaea;
 }
 
 header h1 {
+    font-size: 3em;
     margin: 0;
-    font-size: 2.5em;
-}
-
-header p {
-    margin: 0;
-    font-size: 1.2em;
-}
-
-section {
-    padding: 20px;
-    max-width: 800px;
-    margin: 20px auto;
-}
-
-h2 {
     color: #333;
 }
 
+header p {
+    font-size: 1.2em;
+    color: #777;
+    margin-top: 10px;
+}
+
+/* Navegación */
+nav {
+    text-align: center;
+    margin: 20px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 1em;
+}
+
+nav ul li a:hover {
+    color: #0056b3;
+}
+
+/* Secciones */
+main {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+p {
+    font-size: 1.1em;
+    color: #555;
+    text-align: center;
+}
+
+/* Proyectos */
 .project {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    padding: 15px;
-    margin-bottom: 15px;
+    background-color: #ffffff;
+    border: 1px solid #eaeaea;
+    padding: 20px;
+    margin-bottom: 20px;
     border-radius: 5px;
+    text-align: center;
 }
 
 .project h3 {
+    font-size: 1.5em;
     margin-top: 0;
+    color: #333;
+}
+
+.project p {
+    color: #666;
 }
 
 .project a {
@@ -51,13 +100,15 @@ h2 {
 }
 
 .project a:hover {
-    text-decoration: underline;
+    color: #0056b3;
 }
 
+/* Pie de página */
 footer {
     text-align: center;
-    padding: 10px 0;
-    background-color: #333;
-    color: #fff;
-    margin-top: 20px;
+    padding: 20px 0;
+    background-color: #f9f9f9;
+    color: #aaa;
+    font-size: 0.9em;
+    border-top: 1px solid #eaeaea;
 }
