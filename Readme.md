@@ -4,20 +4,20 @@
 
 ## Proyectos Destacados
 
-## 1. Login Reset Pasword.
+### 1. Login Reset Pasword.
 - Repositorio: [Login-Reset-Password](https://github.com/Godie84/login-roles-usuarios.git)
-## 2. Registro de Permisos Laborales.
-## 3. Reporte de actividades.
-## 4. Reporte pre-operacional motocicletas.
-## 5. Reporte pro-operacional vehículos.
-## 6. Reporte actos inseguros - HSEQ.
-## 7. Reporte condiciones inseguras - HSEQ.
-## 8. Implementación GLPI - para la gestión de tickets.
-## 9. Aplicación móvil android, para el registro de asistencia.
-## 10. Aplicación Web con Web services para la gestión de resistros de asistencia.
-## 11. Aplicación móvil android, para el registro de actividades.
-## 12. Aplicación Web para procesos de seleccion con carga de documentos.
-## 13. Portafolio web minimalista.
+### 2. Registro de Permisos Laborales.
+### 3. Reporte de actividades.
+### 4. Reporte pre-operacional motocicletas.
+### 5. Reporte pro-operacional vehículos.
+### 6. Reporte actos inseguros - HSEQ.
+### 7. Reporte condiciones inseguras - HSEQ.
+### 8. Implementación GLPI - para la gestión de tickets.
+### 9. Aplicación móvil android, para el registro de asistencia.
+### 10. Aplicación Web con Web services para la gestión de resistros de asistencia.
+### 11. Aplicación móvil android, para el registro de actividades.
+### 12. Aplicación Web para procesos de seleccion con carga de documentos.
+### 13. Portafolio web minimalista.
 
 ## Habilidades Técnicas
 
