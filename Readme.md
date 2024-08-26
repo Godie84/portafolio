@@ -5,6 +5,7 @@
 ## Proyectos Destacados
 
 ## 1. Login Reset Pasword.
+- Repositorio: [Login-Reset-Password](https://github.com/Godie84/login-roles-usuarios.git)
 ## 2. Registro de Permisos Laborales.
 ## 3. Reporte de actividades.
 ## 4. Reporte pre-operacional motocicletas.
