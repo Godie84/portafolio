@@ -2,6 +2,7 @@
 
 ¡Hola! Soy Diego Fernando Reina Ramírez, desarrollador de software con 4 años de experiencia en la creación de soluciones tecnológicas eficientes y efectivas. Mi enfoque principal es el desarrollo de aplicaciones móviles en Android y soluciones web multiplataforma, con un fuerte énfasis en el diseño minimalista, la optimización del rendimiento y la experiencia del usuario.
 
+
 ## Proyectos Destacados
 
 ### 1. Login Reset Pasword.
