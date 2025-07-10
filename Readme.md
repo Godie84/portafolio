@@ -22,7 +22,7 @@
 
 ## Habilidades Técnicas
 
-- **Lenguajes de Programación:** Java, JavaScript, HTML5, CSS3, PHP.
+- **Lenguajes de Programación:** Java, JavaScript, HTML5, CSS3, PHP, SQL.
 - **Frameworks y Librerías:** Bootstrap, Laravel.
 - **Herramientas:** Git, GitHub, Trello, Android Studio, Notion.
 - **Metodologías:** Desarrollo Ágil, Scrum.
